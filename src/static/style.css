@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "GothamMedium";
+  src: url("font/GothamMedium_1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamLight";
+  src: url("font/GothamLight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  background-color: #232323;
+  color: #fff;
+  font-family: "GothamMedium", Arial, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  color: #ccc;
+  font-weight: bolder;
+  font-size: 30px;
+  margin:0;
+  padding:20px;
+}
+
+.heading a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  margin: 50px auto;
+  width: 90%;
+  max-width: 800px;
+  background-color: #2f2f2f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+.chatbox {
+  height: 50vh;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.user {
+  background-color: #2979ff;
+  color: #fff;
+  align-self: flex-end;
+  border-radius: 10px 0 10px 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.bot {
+  background-color: #ccc;
+  color: #000;
+  align-self: flex-start;
+  border-radius: 0 10px 10px 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.form {
+  margin-top: 10px;
+}
+
+
+.form button {
+  background-color: #2979ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px ;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "GothamMedium", Arial, sans-serif;
+}
+.form button:hover {
+  background-color: #2978ff9c;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
+.big-icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 10px;
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #ccc;
+  color: #000;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  resize: none;
+  font-family: "GothamLight", Arial, sans-serif;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #2979ff;
+}
+
+/* width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* background of the scrollbar */
+::-webkit-scrollbar-track {
+  background: #2f2f2f;
+}
+
+/* color of the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background-color: #2f2f2f;
+  border-radius: 20px;
+  border: 2px solid #2979ff;
+}
+
+/* on hover of the scrollbar handle */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+

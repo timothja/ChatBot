@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Helpline Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="heading">
+            <a class="" href="/"><img src="static/assets/chatbot.png" class="big-icon" alt="delete"/> ChatBot. </a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="chatbox">
+            {% if user_messages|length == 0 %}
+            <div class=""> 
+                <h2> Welcome to ChatBot! </h2>
+                <h3> Write a message below and press "Send" to start a conversation. </h3>
+            </div>
+            {% endif %}
+            {% for i in range(user_messages|length) %}
+                <div class="message">
+                    <div class="user">{{ user_messages[i] }}</div>
+                    <div class="bot typing">{{ bot_messages[i] }}</div>
+                </div>
+            {% endfor %}
+        </div>
+            <form method="POST" class="form">
+            <textarea id="text_input" name="text_input" rows="5" class="form" placeholder="Start writing here..." autofocus></textarea>
+            <input type="hidden" id="history" name="history" value="{{ chat_history }}">
+            <div class="buttons">
+                <button type="submit" name="button_text" value="clear" class="form"> <img src="static/assets/delete.png" class="icon" alt="delete"/> Delete conversation</button>
+                <button type="submit" name="button_text" value="submit" id="send_button" class="form"><img src="static/assets/send.png" class="icon" alt="send"/> Send</button>
+            </div>
+        </form>
+    </div>
+    </div>
+
+    <script>
+        const chatbox = document.querySelector('.chatbox');
+        chatbox.scrollTop = chatbox.scrollHeight;
+    </script>
+
+
+</body>
+</html>
