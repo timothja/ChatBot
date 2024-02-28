@@ -75,7 +75,7 @@ body {
   padding: 10px;
   max-width: 70%;
   word-wrap: break-word;
-  word-break: break-all;
+  /* word-break: break-all; */
 }
 
 .bot {
@@ -87,7 +87,7 @@ body {
   padding: 10px;
   max-width: 70%;
   word-wrap: break-word;
-  word-break: break-all;
+  /* word-break: break-all; */
 }
 
 .form {
