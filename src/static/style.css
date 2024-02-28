@@ -1,13 +1,19 @@
 @font-face {
   font-family: "GothamMedium";
-  src: url("font/GothamMedium_1.ttf") format("truetype");
+  src: url("fonts/Gotham/Gotham-Light.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
+  font-family: "GothamBold";
+  src: url("fonts/Gotham/Gotham-Bold.otf") format("opentype");
+  src: url();
+}
+
+@font-face {
   font-family: "GothamLight";
-  src: url("font/GothamLight.ttf") format("truetype");
+  src: url("fonts/Gotham/Gotham-Light.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,10 +28,11 @@ body {
 .heading {
   text-align: center;
   color: #ccc;
+  font-family: "GothamBold", Arial, sans-serif;
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 40px;
   margin:0;
-  padding:20px;
+  padding:15px;
 }
 
 .heading a {
@@ -44,9 +51,14 @@ body {
 }
 
 .chatbox {
-  height: 50vh;
+  height: 45vh;
   padding: 20px;
   overflow-y: scroll;
+}
+
+.title {
+  font-size: 30px;
+  font-family: "GothamBold", Arial, sans-serif;
 }
 
 .message {

@@ -16,18 +16,23 @@ openai.api_key = API_KEY
 user_messages = []
 bot_messages = []
 
-############ lorem ipsum ############
+# ############ lorem ipsum ############
 
-import lorem
+# import lorem
 
-for i in range(0, 10):
-    user_messages.append(lorem.paragraph())
-    bot_messages.append(lorem.paragraph())
+# for i in range(0, 10):
+#     user_messages.append(lorem.paragraph())
+#     bot_messages.append(lorem.paragraph())
 
-############ lorem ipsum ############
+# ############ lorem ipsum ############
 
+    
 def chatcompletion(user_input, chat_history):
-    output = openai.ChatCompletion.create(
+    client = openai.OpenAI(
+        api_key=API_KEY,
+    )
+
+    chat_completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
         temperature=1,
         presence_penalty=0,
@@ -36,12 +41,12 @@ def chatcompletion(user_input, chat_history):
             {"role": "system", "content": f"You are a helpful and enthusiastic ChatBot. Do not hesitate to ask questions if you require more information. Here is the chat history: {chat_history}"},
             {"role": "user", "content": f"{user_input}"},
         ]
-    ) 
+    )
 
-    for item in output['choices']:
-        chatgpt_output = item['message']['content']
+    chatgpt_output = chat_completion.choices[0].message.content
 
     return chatgpt_output
+
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -74,8 +79,8 @@ def home():
             user_messages.append(text_input)
             bot_messages.append(chatgpt_output)
 
-            print(user_messages)
-            print(bot_messages)
+            # print(user_messages)
+            # print(bot_messages)
             
             chat_history_html_formatted = chat_history.replace('\n', '<br>')
 

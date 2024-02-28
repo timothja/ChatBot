@@ -14,8 +14,8 @@
         <div class="chatbox">
             {% if user_messages|length == 0 %}
             <div class=""> 
-                <h2> Welcome to ChatBot! </h2>
-                <h3> Write a message below and press "Send" to start a conversation. </h3>
+                <h2 class="title"> Welcome to ChatBot! </h2>
+                <h3> Write a message below and press "Send" to start a conversation.</h3>
             </div>
             {% endif %}
             {% for i in range(user_messages|length) %}
