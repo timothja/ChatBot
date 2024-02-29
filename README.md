@@ -18,7 +18,7 @@ A simple integration of the OpenAI API to create a chatbot using [Python](https:
 3. Create a `.env` file in the src directory and add the following:
 
     ```env
-    OPENAI_API_KEY="your-api-key"
+    API_KEY="your-api-key"
     ```
     Replace `your-api-key` with your OpenAI API key. You can get an API key here: [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys).
 
